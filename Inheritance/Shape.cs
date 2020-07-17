@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccessModifier;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,7 +12,7 @@ namespace Inheritance
 
         public Shape()
         {
-
+            //QuadraticEquation qE = new QuadraticEquation();
         }
 
         public Shape(string color,bool filled)

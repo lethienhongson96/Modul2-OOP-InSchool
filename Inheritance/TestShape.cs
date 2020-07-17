@@ -8,11 +8,21 @@ namespace Inheritance
     {
         public static void Main()
         {
-            Random rnd = new Random();
-            int percent = rnd.Next(1,100);
-            Square square = new Square();
-            square.Resize(percent);
-            Console.WriteLine(square.GetSide());
+            string email = "lethienhongson@gmai.com";
+            Console.WriteLine(IsValidEmail(email));
+        }
+
+        public static bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AccessModifier
 {
-    class QuadraticEquation
+    public class QuadraticEquation
     {
         private double _A, _B, _C;
 
@@ -15,9 +15,22 @@ namespace AccessModifier
             this._C = c;
         }
 
-        public double A() => this._A;
-        public double B() => this._B;
-        public double C() => this._C;
+        public double A
+        { 
+            get => this._A;
+            set => this._A = value;
+        }
+
+        public double B
+        {
+            get => this._B;
+            set => this._B = value;
+        }
+        public double C
+        {
+            get => this._C;
+            set => this._C = value;
+        }
 
         public double GetDiscriminant() => (this._B * this._B) - (4 * this._A * this._C);
 
